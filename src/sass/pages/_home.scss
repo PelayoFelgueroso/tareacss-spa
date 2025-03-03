@@ -1,0 +1,237 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.hero {
+  font-family: Poppins;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 75px;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+
+  .image-wrapper {
+    position: absolute;
+    left: 18%;
+    height: 100vh;
+    bottom: 0;
+    display: flex;
+
+    img {
+      margin-top: auto;
+    }
+  }
+
+  .content-wrapper {
+    padding-top: 100px;
+    max-width: 1600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .left-wrapper {
+      background-color: $light-grey;
+      width: 50%;
+
+      .left-bg {
+        position: absolute;
+        width: 65vw;
+        height: 75vh;
+        background-color: $light-grey;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .left-content {
+        position: relative;
+
+        h1 {
+          font-size: 60px;
+          font-weight: 700;
+        }
+
+        p {
+          margin-top: 0px;
+          font-size: 24px;
+          color: $mid-grey;
+        }
+
+        .btns-wrapper {
+          display: flex;
+          align-items: center;
+          column-gap: 2rem;
+
+          .video-btn {
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+
+            .btn {
+              cursor: pointer;
+              width: 48px;
+              height: 48px;
+              border-radius: 1000px;
+              background-color: white;
+              box-shadow: 0px 10px 15px rgb(0, 0, 0, 0.15);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              transition: transform 0.3s ease-in-out;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-wrapper {
+      width: 35%;
+
+      .right-bg {
+        position: absolute;
+        width: 35vw;
+        height: 75vh;
+        background-color: $cyan-color;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+
+      .icon-wrapper {
+        opacity: 0.1;
+
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
+  .items-wrapper {
+    position: absolute;
+    top: 60vh;
+    width: 100%;
+    max-width: 1600px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .items {
+      width: fit-content;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 1rem;
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr, 1fr, 1fr;
+        column-gap: 4em;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 1rem;
+          max-width: 150px;
+
+          &.item-1 {
+            grid-column-start: 1;
+            grid-column-start: 1;
+          }
+          &.item-2 {
+            grid-column-start: 2;
+            grid-column-start: 2;
+          }
+          &.item-3 {
+            grid-column-start: 3;
+            grid-column-start: 3;
+          }
+
+          .icon {
+            width: 72px;
+            height: 72px;
+            background-color: $cyan-color;
+            border-radius: 1000px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .number {
+            font-size: 36px;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+
+          .text {
+            text-align: center;
+            font-size: 18px;
+            color: $mid-grey;
+          }
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 35%;
+
+    .test {
+      position: absolute;
+
+      max-width: 405px;
+      border-radius: 1rem;
+
+      &.test-1 {
+        top: 40vh;
+        right: 6vw;
+      }
+
+      &.test-2 {
+        top: 70vh;
+        left: 0;
+      }
+
+      .test-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        border-radius: 1rem;
+        background-color: rgba(255, 255, 255, 0.7);
+        filter: blur(1px);
+      }
+
+      .test-content {
+        padding: 24px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+
+        p {
+          margin: 0;
+          font-size: 18px;
+        }
+
+        h4 {
+          margin: 0;
+          font-weight: 700;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

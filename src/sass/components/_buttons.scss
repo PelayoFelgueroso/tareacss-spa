@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the buttons component.
+// -----------------------------------------------------------------------------
+
+.nav-link {
+}
+
+.blue-button {
+  padding: 20px 40px;
+  color: $white-color;
+  background-color: $blue-color;
+  border-radius: 100000px;
+  font-weight: 400;
+  font-family: Poppins;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $blue-color;
+    color: $white-color;
+    text-decoration: none;
+    transform: scale(1.1);
+  }
+}

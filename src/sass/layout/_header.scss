@@ -1,0 +1,90 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header {
+  font-family: Poppins;
+  max-width: 1600px;
+  padding: 0 50px;
+  height: 80px;
+  margin: 0 auto -80px auto;
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .navbar-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      align-items: center;
+      column-gap: 56px;
+
+      a {
+        color: $primary-color;
+        font-family: $font;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .right-bar {
+    grid-column-start: 5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    column-gap: 65px;
+
+    .search {
+      background-color: transparent;
+      border-width: 0px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .cart {
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .sign-in {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
